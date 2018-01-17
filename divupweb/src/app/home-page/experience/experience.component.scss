@@ -1,0 +1,97 @@
+.experience{
+  background:#efefef;
+  color:#777777;
+  padding:150px 5%;
+  h2{
+    margin-bottom:25px;
+    font-size:32px;
+    font-family: Roboto-Regular;
+    color:black;
+    font-weight: 400;
+  }
+  ul{
+    margin-left:20px;
+    list-style: square;
+    li{
+      padding:5px 0;
+    }
+  }
+}
+.experience__item{
+  display: flex;
+  position:relative;
+  transition:all 1s ease;
+}
+#exp_item1{
+  right:100%;
+  margin-bottom:75px;
+}
+#exp_item2{
+  right:100%;
+}
+.experience__item_animate-right{
+  right:0 !important;
+}
+.experience__information{
+
+}
+.experience__image{
+  box-sizing: border-box;
+  min-width:33%;
+  min-height: 100%;
+  background: url("../../../assets/images/exp-background-first.jpg") center center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  color:white;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto-Regular;
+  text-align: center;
+  font-size:48px;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  h3{
+    background: rgba(0,0,0,0.9);
+    padding:20px;
+    box-sizing: border-box;
+    font-size:32px;
+  }
+}
+@media screen and(max-width: 1440px) {
+  .experience{
+    padding:100px 4%;
+    h2{
+      font-size:28px;
+    }
+  }
+  #exp_item1{
+    margin-bottom:50px;
+  }
+}
+@media screen and(max-width: 1024px) {
+  .experience {
+    h2 {
+      font-size: 20px;
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .experience__information{
+    padding:10px;
+  }
+  .experience__image{
+    display:none;
+  }
+  .experience{
+    padding:75px 3%;
+    h2{
+      font-size:16px;
+      margin-bottom: 0;
+    }
+  }
+  #exp_item1{
+    margin-bottom:0;
+  }
+}

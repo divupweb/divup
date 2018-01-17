@@ -1,0 +1,9 @@
+<div id="portfolio" class="portfolio">
+  <h2>Примеры разработанных мною сайтов</h2>
+  <div class="portfolio__align">
+    <article *ngFor="let item of portfolio_items" class="portfolio__item" (click)="redirect('http://'+item.site_name)">
+      <div><p><span>{{item.site_name}}</span>{{item.site_description}}</p></div>
+      <img src="{{item.img_src}}" alt="divup.ru">
+    </article>
+  </div>
+</div>

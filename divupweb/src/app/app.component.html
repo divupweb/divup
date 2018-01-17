@@ -1,0 +1,69 @@
+<div class="dm-overlay" id="feedback">
+    <div class="dm-table">
+        <div class="dm-cell">
+            <div class="dm-modal">
+                <a href="#close" class="close"></a>
+                <h3>Заполните контактную форму и я свяжусь с вами.</h3>
+                <hr size="2" color="black">
+                <p>Просьба обращать внимание на правльность заполнения данных.</p>
+                <form #form="ngForm" id="form" (ngSubmit)="sendMail(form)" >
+                    <input #name="ngModel" type="text" name="name" placeholder="Контактное лицо" ngModel minlength="2" required [ngClass]="{'incorrect': name.touched && name.invalid}">
+                    <input #phone="ngModel" type="text" name="phone" placeholder="Номер телефона (+375-33-302-59-32)" minlength="3" ngModel required [ngClass]="{'incorrect': phone.touched && phone.invalid}">
+                    <input #email="ngModel" type="text" name="email" placeholder="Электронный ящик Email" ngModel email [ngClass]="{'incorrect': email.touched && email.invalid}">
+                    <button type="submit">Отправить данные</button><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div #send_error class="send-error">
+    <h4>Проверьте правильность заполнения данных:</h4>
+    <p *ngIf="name.invalid">- Некорректно заполненое поле имени</p>
+    <p *ngIf="phone.invalid">- Некорректно заполненое поле телефонного номера</p>
+    <p *ngIf="email.invalid">- Некорректно заполненое поле электронного адресса</p>
+</div>
+<div #mail_mes class="mail-message">
+ <p>{{mail_message}}</p>
+</div>
+<header class="header">
+    <div class="header__logotype"><a href="/"><span>&lt;div</span>upweb.ru</a><h1>Ищу работу front-end developer</h1></div>
+    <menu #nav class="header__menu">
+        <ul>
+            <li *ngFor="let item of menu" ><a href="{{item.href}}" (click)="close_nav($event)">{{item.label | uppercase}}</a></li>
+            <li><a href="tel:+375 (33) 302-59-32">+375 (33) 302-59-32</a></li>
+        </ul>
+    </menu>
+    <button (click)="feedback()">{{'Обратная связь' | uppercase}}</button>
+    <button class="header__toggle" (click)="menu_toggle()">≡</button>
+</header>
+<router-outlet></router-outlet>
+<footer class="footer">
+ <div class="footer__logotype-part">
+   <div class="footer__logotype">
+       <span>&lt;div</span>upweb.ru
+       <p>Ищу работу front-end developer</p>
+       <div class="footer__pictures">
+           <div class="footer__pictures-item footer__pictures__item-html"></div>
+           <div class="footer__pictures-item footer__pictures__item-css"></div>
+           <div class="footer__pictures-item footer__pictures__item-js"></div>
+           <div class="footer__pictures-item footer__pictures__item-angular"></div>
+           <div class="footer__pictures-item footer__pictures__item-git"></div>
+       </div>
+       <article>© 2018 divupweb, не разглашает персональные данные своих пользователей и гарантирует их безопасность.Используются сведения, предоставляемые пользователем, исключительно с целью связи с ним, в том числе для направления электронных уведомлений.</article>
+   </div>
+ </div>
+ <div class="footer__navigation">
+     <h3>Навигация</h3>
+        <ul>
+            <li *ngFor="let item of menu"><a href="{{item.href}}" (click)="close_nav($event)">{{item.label}}</a></li>
+        </ul>
+ </div>
+ <div class="footer__contacts">
+     <h3>Контакты</h3>
+        <ul>
+            <li><a href="mailto:divup@gmail.com">divupweb@gmail.com</a></li>
+            <li><a href="tel:+375 (33) 302-59-32">+375-33-302-59-32</a></li>
+            <li>Брестская область, город Барановичи</li>
+        </ul>
+ </div>
+</footer>

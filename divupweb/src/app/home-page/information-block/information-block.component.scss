@@ -1,0 +1,153 @@
+.information-block{
+  background:url("../../../assets/images/inf-block-background.jpg") center center no-repeat;
+  width:100%;
+  min-height:50vh;
+  display:flex;
+  flex-wrap:wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  color:white;
+  padding-top:200px;
+  padding-bottom: 100px;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  opacity:0;
+  animation:inf-fade-in 3s ease;
+  animation-fill-mode:forwards;
+  h3{
+    width:100%;
+    font-size:72px;
+    font-family: Roboto-Regular !important;
+    transition:all 0.3s ease;
+  }
+  h4{
+     width:100%;
+     font-size:30px;
+
+     font-weight:400;
+  }
+  input{
+    width:500px;
+    height:300px;
+    font-size:72px;
+  }
+}
+$ani-speed: 2s;
+$ani-delay: 1s;
+.information-block__arrows{
+  position: relative;
+  width:100%;
+  height:150px;
+  cursor:pointer;
+}
+.arrow {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.arrow-first {
+  animation: arrow-movement $ani-speed ease-in-out infinite;
+}
+.arrow-second {
+  animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+}
+.arrow:before,
+.arrow:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+}
+.arrow:hover:before,
+.arrow:hover:after {
+  background:aqua;
+}
+.arrow:before {
+  transform: rotate(45deg) translateX(-23%);
+  transform-origin: top left;
+}
+.arrow:after {
+  transform: rotate(-45deg) translateX(23%);
+  transform-origin: top right;
+}
+
+// Animation
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    top: 45%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes inf-fade-in {
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+
+
+}
+@media screen and(min-width:1920px){
+  .information-block {
+    min-height: 20vh !important;
+  }
+}
+@media screen and(max-width:1440px){
+  .information-block{
+    padding-top:150px;
+    padding-bottom: 75px;
+    h3{
+      font-size:60px;
+    }
+    h4{
+      font-size:24px;
+    }
+  }
+}
+@media screen and(max-width:768px){
+  .information-block{
+    padding-top:100px;
+    padding-bottom: 0;
+    h3{
+      font-size:48px;
+    }
+    h4{
+      font-size:20px;
+    }
+  }
+}
+@media screen and(max-width:425px){
+  .information-block{
+    padding-top:100px;
+    padding-bottom: 0;
+    h3{
+      font-size:28px;
+    }
+    h4{
+      font-size:12px;
+    }
+  }
+  .arrow {
+    left: 45%;
+    top: 50%;
+  }
+  .information-block__arrows{
+    height:75px;
+  }
+}
