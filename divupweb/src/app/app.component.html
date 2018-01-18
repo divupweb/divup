@@ -5,7 +5,7 @@
                 <a href="#close" class="close"></a>
                 <h3>Заполните контактную форму и я свяжусь с вами.</h3>
                 <hr size="2" color="black">
-                <p>Просьба обращать внимание на правльность заполнения данных.</p>
+                <p>Просьба обращать внимание на правильность заполнения данных.</p>
                 <form #form="ngForm" id="form" (ngSubmit)="sendMail(form)" >
                     <input #name="ngModel" type="text" name="name" placeholder="Контактное лицо" ngModel minlength="2" required [ngClass]="{'incorrect': name.touched && name.invalid}">
                     <input #phone="ngModel" type="text" name="phone" placeholder="Номер телефона (+375-33-302-59-32)" minlength="3" ngModel required [ngClass]="{'incorrect': phone.touched && phone.invalid}">
@@ -26,7 +26,7 @@
  <p>{{mail_message}}</p>
 </div>
 <header class="header">
-    <div class="header__logotype"><a href="/"><span>&lt;div</span>upweb.ru</a><h1>Ищу работу front-end developer</h1></div>
+    <div class="header__logotype"><a href="/"><span>&lt;div</span>up.ru</a><h1>Ищу работу front-end developer</h1></div>
     <menu #nav class="header__menu">
         <ul>
             <li *ngFor="let item of menu" ><a href="{{item.href}}" (click)="close_nav($event)">{{item.label | uppercase}}</a></li>
@@ -40,7 +40,7 @@
 <footer class="footer">
  <div class="footer__logotype-part">
    <div class="footer__logotype">
-       <span>&lt;div</span>upweb.ru
+       <span>&lt;div</span>up.ru
        <p>Ищу работу front-end developer</p>
        <div class="footer__pictures">
            <div class="footer__pictures-item footer__pictures__item-html"></div>
