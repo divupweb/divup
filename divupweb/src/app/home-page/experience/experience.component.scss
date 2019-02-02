@@ -28,6 +28,10 @@
 }
 #exp_item2{
   right:100%;
+  margin-bottom:75px;
+}
+#exp_item3{
+  right:100%;
 }
 .experience__item_animate-right{
   right:0 !important;
@@ -54,9 +58,9 @@
   -webkit-user-select: none;
   h3{
     background: rgba(0,0,0,0.9);
-    padding:20px;
+    padding:15px;
     box-sizing: border-box;
-    font-size:32px;
+    font-size:28px;
   }
 }
 @media screen and(max-width: 1440px) {
@@ -67,6 +71,9 @@
     }
   }
   #exp_item1{
+    margin-bottom:50px;
+  }
+  #exp_item2{
     margin-bottom:50px;
   }
 }
@@ -92,6 +99,9 @@
     }
   }
   #exp_item1{
+    margin-bottom:0;
+  }
+  #exp_item2{
     margin-bottom:0;
   }
 }

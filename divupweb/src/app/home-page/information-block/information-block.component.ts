@@ -8,7 +8,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 export class InformationBlockComponent implements OnInit {
   @ViewChild('h1') title_h1;
   @ViewChild('h2') title_h2;
-  h1:String = 'Ищу работу в направелении junior front-end разработчика ';
+  h1:String = 'Ищу работу в направелении junior front-end разработчика / System Administrator';
   h2:String = 'Подробную информацию и контактные данные вы можете получить ниже';
   constructor() {
   }

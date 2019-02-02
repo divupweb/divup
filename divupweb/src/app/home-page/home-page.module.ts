@@ -8,14 +8,14 @@ import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
-   declarations:[
-       HomePageComponent,
-       InformationBlockComponent,
-       AboutMeComponent,
-       ExperienceComponent,
-       SkillsComponent,
-       PortfolioComponent
-   ],
+    declarations:[
+        HomePageComponent,
+        InformationBlockComponent,
+        AboutMeComponent,
+        ExperienceComponent,
+        SkillsComponent,
+        PortfolioComponent
+    ],
     imports:[CommonModule]
 })
 export class HomePageModule{

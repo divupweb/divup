@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token , Authorization');
-$recepient = 'divupweb@gmail.com';
+$recepient = 'divupwebgame@gmail.com';
 $sitename = "divupweb.ru";
 if ($_SERVER['REQUEST_METHOD'] != 'OPTIONS') {
 
